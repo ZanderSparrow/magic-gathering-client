@@ -1,9 +1,9 @@
 export interface MagicCard {
-    id: Number,
+    id: number,
     name: string,
     description: string,
     set_name: string,
     mana_cost: string,
-    current_value: Number,
+    current_value: number,
     image_url: string
 }

@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Card from './Card';
 import { MagicCard } from './interfaces';
+import './Card.css'
 
 const CardList = () => {
     const [cards, setCards] = useState<MagicCard[]>([]);;
@@ -22,9 +23,9 @@ const CardList = () => {
     }, [])
 
     return (
-        <div>
-            {cards.map((card: MagicCard, idx) => <Card key={idx} card={card} />)}
-        </div>
+        <ul className="card-list">
+            {cards.map((card: MagicCard) => <li key={card.id} className="card-tile"><Card card={card} /></li>)}
+        </ul>
     )
 }
 
