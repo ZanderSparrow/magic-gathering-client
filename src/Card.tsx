@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Card = () => {
+import { MagicCard } from './interfaces';
+
+const Card = ({ card }: {card: MagicCard}) => {
     return (
-        <div>Card</div>
+        <div>
+            <h3>{card.name}</h3>
+            <p>{card.description}</p>
+        </div>
     )
 }
 
